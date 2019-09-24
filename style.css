@@ -1,0 +1,18 @@
+#list {
+    float: left;
+    width: 20vw;
+    height: 80vh;
+    background-color: #869792;
+}
+
+#container {
+    background-color: #3b4250;
+    float: left;
+    width: 44vw;
+    height: 80vh;
+}
+
+#page {
+    width: 100%;
+    height: 100%;
+}
