@@ -39,3 +39,21 @@ textarea {
     top: 200px;
     left: 36%;
 }
+
+#message{
+    margin: auto;
+    display: block;
+    position: relative;
+    top: 25%;
+    left: 45%;
+    font-size: 20px;
+}
+
+#send {
+    width: 120px;
+    height: 50px;
+    background-color: #869792;
+    position: relative;
+    top: 250px;
+    left: 120px;
+}
