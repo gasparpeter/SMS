@@ -60,6 +60,7 @@ p {
 
 li {
     font-size: 25px;
+    cursor: pointer;
 }
 
 li:hover {

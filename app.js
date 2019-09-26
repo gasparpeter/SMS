@@ -10,4 +10,6 @@ sendBtn.addEventListener('click', function () {
     const name = document.createElement('li');
     name.innerText = input.value;
     list.appendChild(name);
+    input.value = null;
+    textarea.value = null;
 });
