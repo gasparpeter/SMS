@@ -12,8 +12,7 @@ sendBtn.addEventListener('click', function () {
     const names = document.createElement('li');
     names.innerText = name.value;
     list.appendChild(names);
-    name.value = null;
-    message.value = null;
+
 
     SMS.push({
         "name": name.value,
@@ -27,7 +26,9 @@ sendBtn.addEventListener('click', function () {
 
         name.value = sms.name;
         message.value = sms.message;
-    })
+    });
+
+    resetInputs()
 
 });
 
@@ -42,3 +43,8 @@ var getChildIndex = function(child){
     }
     return i;
 };
+
+function resetInputs() {
+    name.value = null;
+    message.value = null;
+}
