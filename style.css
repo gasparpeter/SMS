@@ -2,11 +2,12 @@
     float: left;
     width: 20vw;
     height: 80vh;
-    background-color: #869792;
+    background-color: #597588;
 }
 
 #container {
-    background-color: #3b4250;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("http://eskipaper.com/images/best-backgrounds-1.jpg");
+    background-size: 150%;
     float: left;
     width: 44vw;
     height: 80vh;
@@ -32,6 +33,7 @@ p {
     top: 19%;
     left: 49%;
     font-size: 20px;
+    color: white;
 }
 
 #textarea {
@@ -47,6 +49,7 @@ p {
     top: 25%;
     left: 45%;
     font-size: 20px;
+    color: white;
 }
 
 #send {
