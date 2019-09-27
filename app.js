@@ -8,31 +8,48 @@ let sendBtn = document.getElementById('send');
 
 let SMS = [];
 
+let editmode = false;
+let editIndex = null;
+
 sendBtn.addEventListener('click', function () {
 
-    if (name.value.length <= 0 || message.value.length <= 0) {
-        alert('ERROR')
+    if ( editmode && editIndex !== null ) {
+
+        list.children[ editIndex ].innerText = name.value;
+
+        SMS[ editIndex ].name = name.value;
+        SMS[ editIndex ].message = message.value;
+
     }else {
-        const names = document.createElement('li');
-        names.innerText = name.value;
-        list.appendChild(names);
+        if (name.value.length <= 0 || message.value.length <= 0) {
+            alert('ERROR')
+        }else {
+            const names = document.createElement('li');
+            names.innerText = name.value;
+            list.appendChild(names);
 
 
-        SMS.push({
-            "name": name.value,
-            "message": message.value
-        });
+            SMS.push({
+                "name": name.value,
+                "message": message.value
+            });
 
-        names.addEventListener('click',  function (e) {
-            const index = getChildIndex( e.target );
+            names.addEventListener('click',  function (e) {
+                const index = getChildIndex( e.target );
 
-            const sms = SMS[ index ];
+                const sms = SMS[ index ];
 
-            name.value = sms.name;
-            message.value = sms.message;
-        });
+                name.value = sms.name;
+                message.value = sms.message;
 
-        resetInputs()
+                editmode = true;
+                editIndex = index;
+            });
+
+            resetInputs()
+        }
+
+
     }
 
 
